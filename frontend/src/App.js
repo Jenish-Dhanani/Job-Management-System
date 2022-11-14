@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles, createMuiTheme, ThemeProvider } from "@material-ui/core";
 
 import Welcome, { ErrorPage } from "./component/Welcome";
 import Navbar from "./component/Navbar";
@@ -20,6 +20,7 @@ import isAuth, { userType } from "./lib/isAuth";
 
 const useStyles = makeStyles((theme) => ({
   body: {
+    background:'#ecf8e5',
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -31,6 +32,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const theme = createMuiTheme({
+    palette:{
+        primary:{
+            light:'#469e98',
+            main:'#347571',
+            dark:'#285a57',
+            contrastText:'#fff'
+        },
+        secondary:{
+            main:'#3E3A4E',
+            light:'#787583',
+            dark:'#1f1d27',
+        },
+        text:{
+            primary:'#3E4A3C',
+            dark:'#9bd2cf',
+        }
+    }
+})
+
 export const SetPopupContext = createContext();
 
 function App() {
@@ -41,6 +62,7 @@ function App() {
     message: "",
   });
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <SetPopupContext.Provider value={setPopup}>
         <Grid container direction="column">
@@ -105,6 +127,7 @@ function App() {
         />
       </SetPopupContext.Provider>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
