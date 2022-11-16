@@ -98,10 +98,14 @@ const JobTile = (props) => {
       });
   };
 
+  const inlineStyle={
+    'color': 'blue',
+    'background-color' :' aqua'
+}
   const deadline = new Date(job.deadline).toLocaleDateString();
 
   return (
-    <Paper className={classes.jobTileOuter} elevation={3}>
+    <Paper className={classes.jobTileOuter} elevation={3} >
       <Grid container>
         <Grid container item xs={9} spacing={1} direction="column">
           <Grid item>

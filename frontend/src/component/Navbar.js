@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
+    cursor:'pointer',
     flexGrow: 1,
   },
 }));
@@ -33,7 +34,7 @@ const Navbar = (props) => {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h6" className={classes.title} onClick={()=>handleClick('/home')}>
           Job Portal
         </Typography>
         {isAuth() ? (

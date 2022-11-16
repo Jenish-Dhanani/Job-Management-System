@@ -33,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const theme = createMuiTheme({
+    typography:{
+        h2:{
+            color:'#3e4a3c'
+        }
+    },
     palette:{
         primary:{
             light:'#469e98',
