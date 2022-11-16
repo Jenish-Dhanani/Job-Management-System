@@ -224,12 +224,13 @@ const Profile = (props) => {
         style={{ padding: "30px", minHeight: "93vh" }}
       >
         <Grid item>
-          <Typography variant="h2">Profile</Typography>
+          <Typography variant="h2" style={{margin:'2rem'}}>Profile</Typography>
         </Grid>
         <Grid item xs>
           <Paper
+            elevation={3}
             style={{
-              padding: "20px",
+              padding: "2rem",
               outline: "none",
               display: "flex",
               flexDirection: "column",

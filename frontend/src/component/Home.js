@@ -643,8 +643,8 @@ const Home = (props) => {
           justify="center"
           alignItems="center"
         >
-          <Grid item xs>
-            <Typography variant="h2">Jobs</Typography>
+          <Grid item xs >
+            <Typography variant="h2" style={{margin:'2rem'}}>Jobs</Typography>
           </Grid>
           <Grid item xs>
             <TextField
@@ -675,9 +675,10 @@ const Home = (props) => {
             />
           </Grid>
           <Grid item>
-            <IconButton onClick={() => setFilterOpen(true)}>
+            <Typography varient="h5" >Filter Comming soon</Typography>
+            {/* <IconButton onClick={() => setFilterOpen(true)}>
               <FilterListIcon />
-            </IconButton>
+            </IconButton> */}
           </Grid>
         </Grid>
 
